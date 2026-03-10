@@ -13,7 +13,25 @@ const feedbacks = [
   },
 ];
 
-const list = document.getElementById("feedbackList");
+const instagramPosts = [
+  {
+    titulo: "Post 1 • Next Digital",
+    resumo: "Confira este conteúdo direto do nosso Instagram.",
+    url: "https://www.instagram.com/next__digital26/p/DVoKIpvDfnj/",
+  },
+  {
+    titulo: "Post 2 • Next Digital",
+    resumo: "Mais um post oficial publicado no perfil @next_digital26.",
+    url: "https://www.instagram.com/next__digital26/p/DVmcLDEEdXa/",
+  },
+  {
+    titulo: "Post 3 • Next Digital",
+    resumo: "Acompanhe nossos conteúdos e novidades da agência.",
+    url: "https://www.instagram.com/next__digital26/p/DVmbXX7ltJ3/",
+  },
+];
+
+const feedbackList = document.getElementById("feedbackList");
 
 feedbacks.forEach((item, index) => {
   const col = document.createElement("div");
@@ -27,7 +45,27 @@ feedbacks.forEach((item, index) => {
     </article>
   `;
 
-  list.appendChild(col);
+  feedbackList.appendChild(col);
+});
+
+const instagramFeed = document.getElementById("instagramFeed");
+
+instagramPosts.forEach((post, index) => {
+  const col = document.createElement("div");
+  col.className = "col-sm-6 col-xl-4 reveal";
+  col.style.transitionDelay = `${index * 90}ms`;
+
+  col.innerHTML = `
+    <a class="instagram-card" href="${post.url}" target="_blank" rel="noopener noreferrer" aria-label="Abrir post no Instagram: ${post.titulo}">
+      <div class="instagram-thumb"></div>
+      <div class="instagram-content">
+        <h3>${post.titulo}</h3>
+        <p>${post.resumo}</p>
+      </div>
+    </a>
+  `;
+
+  instagramFeed.appendChild(col);
 });
 
 const observer = new IntersectionObserver(
