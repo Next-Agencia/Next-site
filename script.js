@@ -14,21 +14,9 @@ const feedbacks = [
 ];
 
 const instagramPosts = [
-  {
-    titulo: "Post 1 • Next Digital",
-    resumo: "Confira este conteúdo direto do nosso Instagram.",
-    url: "https://www.instagram.com/next__digital26/p/DVoKIpvDfnj/",
-  },
-  {
-    titulo: "Post 2 • Next Digital",
-    resumo: "Mais um post oficial publicado no perfil @next_digital26.",
-    url: "https://www.instagram.com/next__digital26/p/DVmcLDEEdXa/",
-  },
-  {
-    titulo: "Post 3 • Next Digital",
-    resumo: "Acompanhe nossos conteúdos e novidades da agência.",
-    url: "https://www.instagram.com/next__digital26/p/DVmbXX7ltJ3/",
-  },
+  "https://www.instagram.com/next__digital26/p/DVoKIpvDfnj/",
+  "https://www.instagram.com/next__digital26/p/DVmcLDEEdXa/",
+  "https://www.instagram.com/next__digital26/p/DVmbXX7ltJ3/",
 ];
 
 const feedbackList = document.getElementById("feedbackList");
@@ -50,23 +38,23 @@ feedbacks.forEach((item, index) => {
 
 const instagramFeed = document.getElementById("instagramFeed");
 
-instagramPosts.forEach((post, index) => {
+instagramPosts.forEach((postUrl, index) => {
   const col = document.createElement("div");
-  col.className = "col-sm-6 col-xl-4 reveal";
+  col.className = "col-md-6 col-xl-4 reveal";
   col.style.transitionDelay = `${index * 90}ms`;
 
   col.innerHTML = `
-    <a class="instagram-card" href="${post.url}" target="_blank" rel="noopener noreferrer" aria-label="Abrir post no Instagram: ${post.titulo}">
-      <div class="instagram-thumb"></div>
-      <div class="instagram-content">
-        <h3>${post.titulo}</h3>
-        <p>${post.resumo}</p>
-      </div>
-    </a>
+    <div class="instagram-embed-wrapper">
+      <blockquote class="instagram-media" data-instgrm-permalink="${postUrl}" data-instgrm-version="14" data-instgrm-captioned></blockquote>
+    </div>
   `;
 
   instagramFeed.appendChild(col);
 });
+
+if (window.instgrm?.Embeds?.process) {
+  window.instgrm.Embeds.process();
+}
 
 const observer = new IntersectionObserver(
   (entries) => {

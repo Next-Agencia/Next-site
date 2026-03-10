@@ -259,53 +259,27 @@ body {
   background: linear-gradient(180deg, #0c0c0c, #090909);
 }
 
-.instagram-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #2c2c2c;
+
+.instagram-embed-wrapper {
+  background: #111;
+  border: 1px solid #2a2a2a;
   border-radius: 1rem;
-  background: #141414;
-  min-height: 230px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1rem;
+  padding: 0.4rem;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.instagram-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%);
-}
-
-.instagram-thumb {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 122, 26, 0.55), rgba(17, 17, 17, 0.8));
-}
-
-.instagram-content {
-  position: relative;
-  z-index: 1;
-}
-
-.instagram-content h3 {
-  font-size: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-.instagram-content p {
-  color: #d3d3d3;
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.instagram-card:hover {
+.instagram-embed-wrapper:hover {
   transform: translateY(-6px);
   border-color: var(--brand-orange);
 }
+
+.instagram-embed-wrapper .instagram-media {
+  margin: 0 !important;
+  min-width: unset !important;
+  width: 100% !important;
+  border-radius: 0.8rem !important;
+}
+
 
 footer {
   border-top: 1px solid #1f1f1f;
