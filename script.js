@@ -14,9 +14,18 @@ const feedbacks = [
 ];
 
 const instagramPosts = [
-  "https://www.instagram.com/next__digital26/p/DVoKIpvDfnj/",
-  "https://www.instagram.com/next__digital26/p/DVmcLDEEdXa/",
-  "https://www.instagram.com/next__digital26/p/DVmbXX7ltJ3/",
+  {
+    url: "https://www.instagram.com/next__digital26/p/DVoKIpvDfnj/",
+    embedUrl: "https://www.instagram.com/next__digital26/p/DVoKIpvDfnj/embed/captioned",
+  },
+  {
+    url: "https://www.instagram.com/next__digital26/p/DVmcLDEEdXa/",
+    embedUrl: "https://www.instagram.com/next__digital26/p/DVmcLDEEdXa/embed/captioned",
+  },
+  {
+    url: "https://www.instagram.com/next__digital26/p/DVmbXX7ltJ3/",
+    embedUrl: "https://www.instagram.com/next__digital26/p/DVmbXX7ltJ3/embed/captioned",
+  },
 ];
 
 const feedbackList = document.getElementById("feedbackList");
@@ -38,23 +47,29 @@ feedbacks.forEach((item, index) => {
 
 const instagramFeed = document.getElementById("instagramFeed");
 
-instagramPosts.forEach((postUrl, index) => {
+instagramPosts.forEach((post, index) => {
   const col = document.createElement("div");
   col.className = "col-md-6 col-xl-4 reveal";
   col.style.transitionDelay = `${index * 90}ms`;
 
   col.innerHTML = `
     <div class="instagram-embed-wrapper">
-      <blockquote class="instagram-media" data-instgrm-permalink="${postUrl}" data-instgrm-version="14" data-instgrm-captioned></blockquote>
+      <iframe
+        src="${post.embedUrl}"
+        class="instagram-iframe"
+        loading="lazy"
+        allowtransparency="true"
+        allowfullscreen="true"
+        frameborder="0"
+        title="Post do Instagram ${index + 1}"
+      ></iframe>
+      <a class="instagram-open" href="${post.url}" target="_blank" rel="noopener noreferrer">Abrir no Instagram</a>
     </div>
   `;
 
   instagramFeed.appendChild(col);
 });
 
-if (window.instgrm?.Embeds?.process) {
-  window.instgrm.Embeds.process();
-}
 
 const observer = new IntersectionObserver(
   (entries) => {
