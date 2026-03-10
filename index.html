@@ -25,6 +25,10 @@
   </head>
   <body>
     <header class="hero position-relative overflow-hidden" id="inicio">
+      <div class="floating floating-1"></div>
+      <div class="floating floating-2"></div>
+      <div class="floating floating-3"></div>
+
       <nav class="navbar navbar-expand-lg py-3">
         <div class="container">
           <a class="navbar-brand d-flex align-items-center gap-3" href="#inicio">
@@ -49,7 +53,13 @@
               <li class="nav-item"><a class="nav-link" href="#feedbacks">Feedbacks</a></li>
               <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
               <li class="nav-item">
-                <a class="btn btn-whatsapp" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Next%20Ag%C3%AAncia" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+                <a
+                  class="btn btn-whatsapp pulse"
+                  href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Next%20Ag%C3%AAncia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Falar no WhatsApp</a
+                >
               </li>
             </ul>
           </div>
@@ -58,20 +68,26 @@
 
       <div class="container py-5 hero-content">
         <div class="row align-items-center g-5 py-lg-5">
-          <div class="col-lg-7">
+          <div class="col-lg-7 reveal">
             <p class="badge-custom">Agência de serviços digitais</p>
-            <h1 class="display-4 fw-bold">Crescimento real para sua empresa com tecnologia e marketing</h1>
+            <h1 class="display-4 fw-bold gradient-text">Crescimento real para sua empresa com tecnologia e marketing</h1>
             <p class="lead mt-4 text-light-emphasis">
               Da estrutura de TI ao funil de vendas com tráfego pago e IA no WhatsApp, entregamos
               estratégias completas para acelerar resultados.
             </p>
             <div class="d-flex flex-wrap gap-3 mt-4">
-              <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20uma%20consultoria%20completa" class="btn btn-cta" target="_blank" rel="noopener noreferrer">Solicitar proposta</a>
+              <a
+                href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20uma%20consultoria%20completa"
+                class="btn btn-cta pulse"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Solicitar proposta</a
+              >
               <a href="#servicos" class="btn btn-outline-light">Ver serviços</a>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="hero-card p-4">
+          <div class="col-lg-5 reveal">
+            <div class="hero-card p-4 glass">
               <h2 class="h4 mb-3">Por que escolher a Next?</h2>
               <ul class="list-unstyled m-0">
                 <li>✅ Atendimento rápido e consultivo</li>
@@ -82,50 +98,77 @@
             </div>
           </div>
         </div>
+
+        <div class="row g-3 mt-2 stats reveal">
+          <div class="col-6 col-lg-3">
+            <div class="stats-card glass">
+              <strong class="counter" data-target="150">0</strong>
+              <span>Projetos entregues</span>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stats-card glass">
+              <strong class="counter" data-target="97">0</strong>
+              <span>% satisfação</span>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stats-card glass">
+              <strong class="counter" data-target="24">0</strong>
+              <span>Horas de suporte</span>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stats-card glass">
+              <strong class="counter" data-target="6">0</strong>
+              <span>Áreas estratégicas</span>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
       <section id="servicos" class="section py-5">
         <div class="container">
-          <div class="text-center mb-5">
+          <div class="text-center mb-5 reveal">
             <h2 class="section-title">Serviços ofertados</h2>
             <p class="section-subtitle">Soluções completas para sua operação vender mais e escalar com segurança.</p>
           </div>
 
           <div class="row g-4">
-            <div class="col-md-6 col-xl-4">
-              <article class="service-card h-100">
+            <div class="col-md-6 col-xl-4 reveal">
+              <article class="service-card h-100 shine">
                 <h3>Suporte de TI</h3>
                 <p>Manutenção, monitoramento, segurança e suporte técnico para manter sua operação estável.</p>
               </article>
             </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="service-card h-100">
+            <div class="col-md-6 col-xl-4 reveal">
+              <article class="service-card h-100 shine">
                 <h3>Tráfego Pago</h3>
                 <p>Campanhas de performance em Meta e Google para gerar leads qualificados e aumentar conversões.</p>
               </article>
             </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="service-card h-100">
+            <div class="col-md-6 col-xl-4 reveal">
+              <article class="service-card h-100 shine">
                 <h3>Mídias Sociais</h3>
                 <p>Planejamento de conteúdo, design, calendário editorial e posicionamento estratégico de marca.</p>
               </article>
             </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="service-card h-100">
+            <div class="col-md-6 col-xl-4 reveal">
+              <article class="service-card h-100 shine">
                 <h3>Criação e Atualização de Sites</h3>
                 <p>Sites institucionais, landing pages e melhorias contínuas com foco em UX e performance.</p>
               </article>
             </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="service-card h-100">
+            <div class="col-md-6 col-xl-4 reveal">
+              <article class="service-card h-100 shine">
                 <h3>Programação de Apps</h3>
                 <p>Aplicativos web e mobile personalizados para otimizar processos e melhorar experiência dos clientes.</p>
               </article>
             </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="service-card h-100">
+            <div class="col-md-6 col-xl-4 reveal">
+              <article class="service-card h-100 shine">
                 <h3>Integração de IA no WhatsApp</h3>
                 <p>Automação inteligente para atendimento, vendas e qualificação de leads no WhatsApp (WPP).</p>
               </article>
@@ -136,7 +179,7 @@
 
       <section id="feedbacks" class="section py-5 feedbacks">
         <div class="container">
-          <div class="text-center mb-5">
+          <div class="text-center mb-5 reveal">
             <h2 class="section-title">Feedbacks de clientes</h2>
           </div>
           <div class="row g-4" id="feedbackList"></div>
@@ -146,15 +189,15 @@
       <section id="contato" class="section py-5 cta-section">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <div class="cta-box text-center">
+            <div class="col-lg-10 reveal">
+              <div class="cta-box text-center glass">
                 <h2>Pronto para escalar seu negócio?</h2>
                 <p class="mb-4">Fale com nossa equipe no WhatsApp e receba um plano personalizado para sua empresa.</p>
                 <a
                   href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20crescer%20com%20a%20Next%20Ag%C3%AAncia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-cta btn-lg"
+                  class="btn btn-cta btn-lg pulse"
                 >
                   Quero atendimento agora
                 </a>
@@ -169,7 +212,11 @@
       <p class="m-0">© <span id="year"></span> Next Agência. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
