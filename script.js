@@ -13,23 +13,6 @@ const feedbacks = [
   },
 ];
 
-const instagramPosts = [
-  {
-    url: "https://www.instagram.com/next__digital26/p/DVoKIpvDfnj/",
-    titulo: "Post DVoKIpvDfnj",
-    descricao: "Conteúdo oficial publicado no perfil @next_digital26.",
-  },
-  {
-    url: "https://www.instagram.com/next__digital26/p/DVmcLDEEdXa/",
-    titulo: "Post DVmcLDEEdXa",
-    descricao: "Confira as novidades e estratégias da Next Digital.",
-  },
-  {
-    url: "https://www.instagram.com/next__digital26/p/DVmbXX7ltJ3/",
-    titulo: "Post DVmbXX7ltJ3",
-    descricao: "Mais um conteúdo real com foco em resultado e performance.",
-  },
-];
 
 const feedbackList = document.getElementById("feedbackList");
 
@@ -50,36 +33,6 @@ if (feedbackList) {
   });
 }
 
-const instagramFeed = document.getElementById("instagramFeed");
-
-if (instagramFeed) {
-  instagramPosts.forEach((post, index) => {
-  const col = document.createElement("div");
-  col.className = "col-md-6 col-xl-4 reveal";
-  col.style.transitionDelay = `${index * 90}ms`;
-
-  col.innerHTML = `
-    <article class="instagram-card-real">
-      <div class="ig-header">
-        <span class="ig-avatar">N</span>
-        <div>
-          <strong>@next_digital26</strong>
-          <p>${post.titulo}</p>
-        </div>
-      </div>
-      <div class="ig-media">
-        <span class="ig-chip">Instagram</span>
-      </div>
-      <div class="ig-body">
-        <p>${post.descricao}</p>
-        <a class="instagram-open" href="${post.url}" target="_blank" rel="noopener noreferrer">Ver post completo</a>
-      </div>
-    </article>
-  `;
-
-    instagramFeed.appendChild(col);
-  });
-}
 
 const observer = new IntersectionObserver(
   (entries) => {
