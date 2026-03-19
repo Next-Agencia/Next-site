@@ -7,7 +7,7 @@
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -45,17 +45,25 @@ body {
 
 .hero {
   min-height: 92vh;
-  background: radial-gradient(circle at 10% 10%, #2a2a2a 0%, var(--brand-black) 55%);
+  background: radial-gradient(
+    circle at 10% 10%,
+    #2a2a2a 0%,
+    var(--brand-black) 55%
+  );
 }
 
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
   right: -120px;
   top: -120px;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(255, 122, 26, 0.35), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 122, 26, 0.35),
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -135,7 +143,11 @@ body {
 }
 
 .hero-card {
-  background: linear-gradient(135deg, rgba(255, 122, 26, 0.18), rgba(255, 122, 26, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 122, 26, 0.18),
+    rgba(255, 122, 26, 0.05)
+  );
   border: 1px solid rgba(255, 122, 26, 0.25);
   border-radius: 1rem;
 }
@@ -182,17 +194,24 @@ body {
   border: 1px solid #262626;
   border-radius: 1rem;
   padding: 1.5rem;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .shine::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -120%;
   left: -120%;
   width: 70%;
   height: 220%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.14),
+    transparent
+  );
   transform: rotate(20deg);
   transition: all 0.6s ease;
 }
@@ -244,8 +263,6 @@ body {
   background: rgba(255, 122, 26, 0.08);
 }
 
-
-
 .btn-instagram {
   background: linear-gradient(45deg, #fd1d1d, #fcb045);
   color: #000;
@@ -262,13 +279,14 @@ body {
   background: linear-gradient(180deg, #0c0c0c, #090909);
 }
 
-
 .instagram-card-real {
   background: #131313;
   border: 1px solid #2a2a2a;
   border-radius: 1rem;
   overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .instagram-card-real:hover {
@@ -304,7 +322,11 @@ body {
 
 .ig-media {
   min-height: 260px;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 122, 26, 0.45), rgba(7, 7, 7, 0.95));
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 122, 26, 0.45),
+    rgba(7, 7, 7, 0.95)
+  );
   display: flex;
   align-items: flex-end;
   padding: 0.9rem;
@@ -337,7 +359,6 @@ body {
   color: var(--brand-orange);
 }
 
-
 footer {
   border-top: 1px solid #1f1f1f;
   color: #9b9b9b;
@@ -346,7 +367,9 @@ footer {
 .reveal {
   opacity: 0;
   transform: translateY(30px) scale(0.98);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
 }
 
 .reveal.visible {
@@ -385,7 +408,6 @@ footer {
   .floating {
     display: none;
   }
-
 }
 
 .nav-link.active {
@@ -397,7 +419,9 @@ footer {
   border: 1px solid #2a2a2a;
   border-radius: 1rem;
   padding: 1.3rem;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .team-card:hover {
@@ -477,10 +501,13 @@ footer {
 }
 
 .service-list {
-  color: #d0d0d0;
   padding-left: 1.2rem;
   display: grid;
   gap: 0.55rem;
+}
+
+.color-secondary {
+  color: #d0d0d0;
 }
 
 @media (max-width: 991px) {
@@ -543,7 +570,6 @@ footer {
 .footer-text {
   color: #b9b9b9;
   line-height: 1.6;
-
 }
 
 .footer-links {
@@ -576,19 +602,17 @@ footer {
 
 /* Clarear menu hamburguer mobile */
 .navbar-toggler {
-  border-color: rgba(255,255,255,0.25);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .navbar-toggler-icon {
   filter: brightness(5);
 }
 
-
 /* Melhorar leitura do texto da hero */
 .hero .lead {
   color: #e5e5e5;
 }
-
 
 /* Espaçamento feedbacks */
 .feedback-card p:first-child {
@@ -599,7 +623,6 @@ footer {
   margin-top: 1.4rem;
 }
 
-
 /* Corrigir quebra de email no footer */
 .footer-links a {
   word-break: break-word;
@@ -609,21 +632,18 @@ footer {
   word-break: break-word;
 }
 
-
 /* Reduzir espaçamento footer mobile */
-@media (max-width:768px){
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 0.3rem;
+  }
 
-.footer-links{
-gap:0.3rem;
-}
+  .footer-top .col-6 {
+    width: 48%;
+  }
 
-.footer-top .col-6{
-width:48%;
-}
-
-.footer-links a,
-.footer-links span{
-font-size:0.9rem;
-}
-
+  .footer-links a,
+  .footer-links span {
+    font-size: 0.9rem;
+  }
 }
